@@ -1,44 +1,5 @@
 # Generating UI
 
-![Screenshot of app](./static/screenshot.png)
-
-Generating UI is an open source web application that leverages AI agents to solve user problems by generating interactive UI interfaces. Built on top of [Open Canvas](https://github.com/langchain-ai/open-canvas), this project focuses specifically on transforming natural language requirements into functional user interfaces.
-
-## Key Capabilities
-
-1. **UI-First Problem Solving**: Generating UI specializes in understanding user problems and creating appropriate UI solutions, from simple forms to complex interactive components.
-2. **Built on Open Canvas**: Inherits all the powerful features of Open Canvas including memory systems, reflection agents, and collaborative editing capabilities.
-3. **Natural Language to UI**: Advanced pipeline that converts user descriptions into working UI code with proper state management and styling.
-4. **Interactive Development**: Users can iterate on generated UIs through natural conversation, refining and enhancing the interface in real-time.
-
-## Core Features
-
-- **Intelligent UI Generation**: Automatically creates UI components and interfaces based on user requirements and problem descriptions
-- **Memory-Powered Personalization**: Built-in memory system that remembers user preferences, design patterns, and UI requirements across sessions for more personalized experiences
-- **Custom UI Quick Actions**: Define reusable UI patterns and components that can be applied with a single click, tailored to your specific needs
-- **Pre-built UI Templates**: Comprehensive library of pre-built UI components and templates for common interface patterns
-- **UI Version Control**: All generated UI artifacts have full version history, allowing you to explore different design iterations and revert to previous versions
-- **Live Preview & Editing**: Real-time rendering of generated UI with seamless switching between code view and visual preview
-- **Multi-Format Output**: Generate complete UI solutions including HTML, CSS, JavaScript, and documentation in a unified workflow
-
-## Architecture Overview
-
-# System Design
-
-**Generating UI** is built on top of **Open Canvas**, extending its finite state machine architecture to focus specifically on UI generation workflows. The system operates through intelligent state transitions, where each state corresponds to a different phase of UI creation - from requirement analysis to final rendering.
-
-The core state management is handled through `const builder = new StateGraph(OpenCanvasGraphAnnotation)` in `agents/src/open-canvas/index.ts`, with all user interactions flowing through the `generatePath` function. Each node in the system leverages Large Language Models (LLMs) to perform specialized UI generation tasks, with implementations located in `agents/src/open-canvas/nodes/` and prompts centralized in `agents/open-canvas/prompts.ts`.
-
-# Enhanced UI Generation Pipeline
-
-Building on Open Canvas's foundation, **Generating UI** introduces two key enhancements:
-
-1. **Intelligent Requirements Analysis:**  
-   Advanced logic that analyzes user problems and automatically determines the most appropriate UI solution, from simple components to complex interactive interfaces.
-
-2. **Comprehensive UI Rendering Pipeline:**  
-   A sophisticated rendering system that transforms generated UI code into fully functional, styled interfaces with proper state management and interactivity.
-
 ## Setup Locally
 
 ### Prerequisites
