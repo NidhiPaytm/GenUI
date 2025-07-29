@@ -104,3 +104,13 @@ yarn dev
 On initial load, compilation may take a little bit of time.
 
 Then, open [localhost:3000](http://localhost:3000) with your browser and start generating UI!
+
+# Citation
+If you find this work useful for your research, please cite our github repo:
+```bibtex
+@misc{chen2025generative,
+    title = {Beyond Chat: Generative Interfaces for Language Models},
+    author = {Chen, Jiaqi and Zhang, Yanzhe and Zhang, Yutong and Shao, Yijia and Yang, Diyi},
+    year = {2025}
+}
+```
