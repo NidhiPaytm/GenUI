@@ -38,8 +38,8 @@ Generating UI requires the following API keys and external services:
 First, clone the repository:
 
 ```bash
-git clone <your-generating-ui-repository-url>
-cd generating-ui
+git clone git@github.com:SALT-NLP/GenUI.git
+cd GenUI
 ```
 
 Next, install the dependencies:
