@@ -1,5 +1,14 @@
-# Generating UI
+<br />
+<p align="center">
+<a href="https://genertiveui.github.io/" target="_blank">
+  <img src="./static/head.png" alt="GenUI banner">
+</a>
+</p>
+<br />
 
+<p align="center">
+We investigate Generative Interfaces for Language Models, a paradigm where LLMs respond to user queries by proactively generating user interfaces (UIs) to enable more adaptive, interactive interactions that better support complex user goals.
+</p>
 ## Setup Locally
 
 ### Prerequisites
