@@ -4,6 +4,11 @@
   <img src="./static/head.png" alt="GenUI banner">
 </a>
 </p>
+Jiaqi Chen*, Yanzhe Zhang*, Yutong Zhang, Yijia Shao, Diyi Yang
+
+Stanford University
+
+* Equal contribution
 <br />
 <h3 align="center">
   <b><a href="https://genertiveui.github.io/">Homepage</a></b>
