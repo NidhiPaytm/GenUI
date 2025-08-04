@@ -19,7 +19,13 @@
 <p align="center">
 We investigate Generative Interfaces for Language Models, a paradigm where LLMs respond to user queries by proactively generating user interfaces (UIs) to enable more adaptive, interactive interactions that better support complex user goals.
 </p>
-
+<br />
+<p align="center">
+<a href="https://genertiveui.github.io/" target="_blank">
+  <img src="./static/example.png" alt="GenUI banner">
+</a>
+</p>
+<br />
 ## How Generative UI works?
 
 - **Requirement specification** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)]: First, we parse the input into a requirement specification, capturing the main goal, desired features, UI components, interaction styles, and problem-solving strategies.
