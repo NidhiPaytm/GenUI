@@ -12,9 +12,6 @@
   •
   <b><a href="https://github.com/SALT-NLP/GenUI">Repo</a></b>
 
-
-[Aug 3] Release code and preprint paper.
-
 ## What is Generative UIs?
 <p align="center">
 <a href="https://genertiveui.github.io/" target="_blank">
