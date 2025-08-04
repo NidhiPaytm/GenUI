@@ -18,16 +18,14 @@
 </p>
 <p align="center">
 We investigate Generative Interfaces for Language Models, a paradigm where LLMs respond to user queries by proactively generating user interfaces (UIs) to enable more adaptive, interactive interactions that better support complex user goals.
-</p>
-<br />
+
+## How Generative UI works?
 <p align="center">
 <a href="https://genertiveui.github.io/" target="_blank">
-  <img src="./static/example.png" alt="GenUI banner">
+  <img src="./static/method.png" alt="GenUI banner">
 </a>
 </p>
-<br />
-## How Generative UI works?
-
+<p align="center">
 - **Requirement specification** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)]: First, we parse the input into a requirement specification, capturing the main goal, desired features, UI components, interaction styles, and problem-solving strategies.
 
 - **Structured interface-specific representation generation** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)]: Second, we generate a Structured Interface-Specific Representation based on the requirement specification.
@@ -36,8 +34,15 @@ We investigate Generative Interfaces for Language Models, a paradigm where LLMs 
 Finally, the entire context, including the natural language query, requirement specification, structured representation, 7 predefined components, and retrieved examples, is passed to a code generation model, which synthesizes executable HTML/CSS/JS code. This completes the pipeline from query to fully rendered, high-quality interactive interface.
 
 
-## Setup Locally
-
+## Setup
+</p>
+<br />
+<p align="center">
+<a href="https://genertiveui.github.io/" target="_blank">
+  <img src="./static/example.png" alt="GenUI banner">
+</a>
+</p>
+<br />
 ### Prerequisites
 
 Generating UI requires the following API keys and external services:
