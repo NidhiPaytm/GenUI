@@ -6,7 +6,8 @@
 </p>
 <br />
 
-Latest News 🔥
+### 🔥 Latest News
+
 [Aug 3] Release code and preprint paper.
 
 ## What is Generative UIs
@@ -20,6 +21,14 @@ We investigate Generative Interfaces for Language Models, a paradigm where LLMs 
 </p>
 
 ## How Generative UI works
+
+- **Requirement specification** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)]: First, we parse the input into a requirement specification, capturing the main goal, desired features, UI components, interaction styles, and problem-solving strategies.
+
+- **Structured interface-specific representation generation** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)]: Second, we generate a Structured Interface-Specific Representation based on the requirement specification.
+
+- **UI generation** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L1458)]: To support faithful realization of the structured specification, we utilize a component codebase containing reusable implementations of common UI elements (e.g., charts, videos, synchronized clocks). In addition, a web retrieval module gathers relevant UI examples and data sources to inform both the representation design and the final rendering.
+Finally, the entire context, including the natural language query, requirement specification, structured representation, 7 predefined components, and retrieved examples, is passed to a code generation model, which synthesizes executable HTML/CSS/JS code. This completes the pipeline from query to fully rendered, high-quality interactive interface.
+
 
 ## Setup Locally
 
