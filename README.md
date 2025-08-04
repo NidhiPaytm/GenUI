@@ -26,6 +26,7 @@ We investigate Generative Interfaces for Language Models, a paradigm where LLMs 
 </a>
 </p>
 <p align="center">
+
 - **Requirement specification** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)]: First, we parse the input into a requirement specification, capturing the main goal, desired features, UI components, interaction styles, and problem-solving strategies.
 
 - **Structured interface-specific representation generation** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)]: Second, we generate a Structured Interface-Specific Representation based on the requirement specification.
