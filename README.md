@@ -40,6 +40,7 @@ Finally, the entire context, including the natural language query, requirement s
 
 - **Iterative refinement** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L1642)]: We first generate several UI candidates and score them using the reward function. The best one is selected, then used to guide the next round of generation. This process repeats with feedback until a candidate meets the quality threshold.
 
+
 ## Setup
 </p>
 <br />
