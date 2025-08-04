@@ -5,8 +5,13 @@
 </a>
 </p>
 <br />
+<h3 align="center">
+  <b><a href="https://genertiveui.github.io/">Homepage</a></b>
+  •
+  <b><a href="https://genertiveui.github.io/">Paper</a></b>
+  •
+  <b><a href="https://github.com/SALT-NLP/GenUI">Repo</a></b>
 
-### 🔥 Latest News
 
 [Aug 3] Release code and preprint paper.
 
