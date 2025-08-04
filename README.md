@@ -34,6 +34,9 @@ We investigate Generative Interfaces for Language Models, a paradigm where LLMs 
 - **UI generation** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L1458)]: To support faithful realization of the structured specification, we utilize a component codebase containing reusable implementations of common UI elements (e.g., charts, videos, synchronized clocks). In addition, a web retrieval module gathers relevant UI examples and data sources to inform both the representation design and the final rendering.
 Finally, the entire context, including the natural language query, requirement specification, structured representation, 7 predefined components, and retrieved examples, is passed to a code generation model, which synthesizes executable HTML/CSS/JS code. This completes the pipeline from query to fully rendered, high-quality interactive interface.
 
+- **Adaptive reward function** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L1591)]: We use a large language model to automatically generate evaluation criteria based on each user query, such as “clarity” or “concept explanation,” assigning weights and verification rules to compute an overall score.
+
+- **Iterative refinement** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L1642)]: We first generate several UI candidates and score them using the reward function. The best one is selected, then used to guide the next round of generation. This process repeats with feedback until a candidate meets the quality threshold.
 
 ## Setup
 </p>
