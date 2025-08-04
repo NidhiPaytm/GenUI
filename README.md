@@ -8,7 +8,7 @@ Jiaqi Chen*, Yanzhe Zhang*, Yutong Zhang, Yijia Shao, Diyi Yang
 
 Stanford University
 
-* Equal contribution
+*Equal contribution
 <br />
 <h3 align="center">
   <b><a href="https://genertiveui.github.io/">Homepage</a></b>
