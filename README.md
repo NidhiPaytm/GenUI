@@ -9,6 +9,13 @@
 <p align="center">
 We investigate Generative Interfaces for Language Models, a paradigm where LLMs respond to user queries by proactively generating user interfaces (UIs) to enable more adaptive, interactive interactions that better support complex user goals.
 </p>
+
+<h3 align="center">
+  <b><a href="https://huggingface.co/datasets/SALT-NLP/GenUI/tree/main">Huggingface</a></b> |
+  <b><a href="https://genertiveui.github.io/">Homepage</a></b>
+
+---
+
 ## Setup Locally
 
 ### Prerequisites
