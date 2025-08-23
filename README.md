@@ -17,23 +17,11 @@ Stanford University
   •
   <b><a href="https://github.com/SALT-NLP/GenUI">Repo</a></b>
 
-## What is Generative UIs?
-<p align="center">
-<a href="https://genertiveui.github.io/" target="_blank">
-  <img src="./static/intro.png" alt="GenUI banner">
-</a>
-</p>
-<p align="center">
+## What are Generative Interfaces?
+
 We investigate Generative Interfaces for Language Models, a paradigm where LLMs respond to user queries by proactively generating user interfaces (UIs) to enable more adaptive, interactive interactions that better support complex user goals.
 
-## How Generative UI works?
-<p align="center">
-<a href="https://genertiveui.github.io/" target="_blank">
-  <img src="./static/method.png" alt="GenUI banner">
-</a>
-</p>
-<p align="center">
-
+## How do Generative Interfaces work?
 - **Requirement specification** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)], [[Code](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/nodes/analyze-requirements.ts#L31)]: First, we parse the input into a requirement specification, capturing the main goal, desired features, UI components, interaction styles, and problem-solving strategies.
 
 - **Structured representation generation** [[system prompt](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/prompts.ts#L960)], [[Code](https://github.com/SALT-NLP/GenUI/blob/main/apps/agents/src/open-canvas/nodes/generate-web-dsl/index.ts#L21)]: Second, we generate a Structured Interface-Specific Representation based on the requirement specification.
@@ -47,33 +35,20 @@ Finally, the entire context, including the natural language query, requirement s
 
 
 ## Setup
-</p>
-<br />
-<p align="center">
-<a href="https://genertiveui.github.io/" target="_blank">
-  <img src="./static/example.png" alt="GenUI banner">
-</a>
-</p>
-<br />
 
 ### Prerequisites
-
-Generating UI requires the following API keys and external services:
 
 #### Package Manager
 
 - [Yarn](https://yarnpkg.com/)
 
-#### APIs
+#### API Keys
+
+Put the following API keys in the `.env` file.
 
 - [OpenAI API key](https://platform.openai.com/signup/)
 - [Anthropic API key](https://console.anthropic.com/)
-- (optional) [Google GenAI API key](https://aistudio.google.com/apikey)
-- (optional) [Fireworks AI API key](https://fireworks.ai/login)
-- (optional) [Groq AI API key](https://groq.com) - audio/video transcription
-- (optional) [FireCrawl API key](https://firecrawl.dev) - web scraping
-- (optional) [ExaSearch API key](https://exa.ai) - web search
-
+- [Google API key](https://console.cloud.google.com/apis/credentials)
 
 #### Authentication
 
@@ -102,46 +77,40 @@ Next, install the dependencies:
 yarn install
 ```
 
-After installing dependencies, copy the contents of both `.env.example` files in the root of the project, and in `apps/web` into `.env` and set the required values:
+After installing dependencies, set the required values (API keys, authentication information) in `./apps/web/.env.example`.
+Then copy it to `.env` in the root folder of the project, and in `apps/web`.
 
 ```bash
 # The root `.env` file will be read by the LangGraph server for the agents.
-cp .env.example .env
+cp ./apps/web/.env.example ./.env
+cp ./apps/web/.env.example ./apps/web/.env
 ```
 
-```bash
-# The `apps/web/.env` file will be read by the frontend.
-cd apps/web/
-cp .env.example .env
-```
-
-Then, setup authentication with Supabase.
-
-### Setup Authentication
+#### Setup Authentication
 
 After creating a Supabase account, visit your [dashboard](https://supabase.com/dashboard/projects) and create a new project.
 
 Next, navigate to the `Project Settings` page inside your project, and then to the `API` tag. Copy the `Project URL`, and `anon public` project API key. Paste them into the `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` environment variables in the `apps/web/.env` file.
 
-After this, navigate to the `Authentication` page, and the `Providers` tab. Make sure `Email` is enabled (also ensure you've enabled `Confirm Email`). You may also enable `GitHub`, and/or `Google` if you'd like to use those for authentication. (see these pages for documentation on how to setup each provider: [GitHub](https://supabase.com/docs/guides/auth/social-login/auth-github), [Google](https://supabase.com/docs/guides/auth/social-login/auth-google))
+After this, navigate to the `Authentication` page and the `Providers` tab. Make sure `Email` is enabled (also ensure you've enabled `Confirm Email`). You may also enable `GitHub`, and/or `Google` if you'd like to use those for authentication. (see these pages for documentation on how to set up each provider: [GitHub](https://supabase.com/docs/guides/auth/social-login/auth-github), [Google](https://supabase.com/docs/guides/auth/social-login/auth-google))
 
-#### Test authentication
+#### Test Authentication
 
-To verify authentication works, run `yarn dev` and visit [localhost:3000](http://localhost:3000). This should redirect you to the [login page](http://localhost:3000/auth/login). From here, you can either login with Google or GitHub, or if you did not configure these providers, navigate to the [signup page](http://localhost:3000/auth/signup) and create a new account with an email and password. This should then redirect you to a conformation page, and after confirming your email you should be redirected to the [home page](http://localhost:3000).
+To verify authentication works, run `yarn dev` and visit [localhost:3000](http://localhost:3000). This should redirect you to the [login page](http://localhost:3000/auth/login). From here, you can either log in with Google or GitHub, or if you haven't configured these providers, navigate to the [signup page](http://localhost:3000/auth/signup) and create a new account with an email and password. This should then redirect you to a confirmation page, and after confirming your email, you should be redirected to the [home page](http://localhost:3000).
 
-### Setup LangGraph Server
+### Setup Server
 
-The first step to running Generating UI locally is to build the application. This is because Generating UI uses a monorepo setup, and requires workspace dependencies to be built so other packages/apps can access them.
+The first step to running Generating UI locally is to build the application. This is because Generating UI uses a monorepo setup and requires workspace dependencies to be built so other packages/apps can access them.
 
-Run the following command from the root of the repository:
+1. Run the following command from the root of the repository:
 
 ```bash
 yarn build
 ```
 
-Now we'll cover how to setup and run the LangGraph server locally.
+2. Navigate to `apps/agents` and run `yarn dev` (this runs `npx @langchain/langgraph-cli dev --port 54367`).
 
-Navigate to `apps/agents` and run `yarn dev` (this runs `npx @langchain/langgraph-cli dev --port 54367`).
+You will see something like:
 
 ```
 Ready!
@@ -149,18 +118,22 @@ Ready!
 - 🎨 Studio UI: https://smith.langchain.com/studio?baseUrl=http://localhost:54367
 ```
 
-After your LangGraph server is running, execute the following command inside `apps/web` to start the Generating UI frontend:
+3. After your LangGraph server is running, execute the following command inside `apps/web` to start the Generating UI frontend:
 
 ```bash
 yarn dev
 ```
 
-On initial load, compilation may take a little bit of time.
+On initial load, compilation may take time.
 
-Then, open [localhost:3000](http://localhost:3000) with your browser and start generating UI!
+4. Open [localhost:3000](http://localhost:3000) with your browser and start trying generative interfaces. Using Claude is recommended. Generation can take multiple minutes due to iterative generation. You can track the intermediate steps in the terminal where you run `yarn dev` in `apps/agents`.
+
+### Troubleshooting
+
+For problems related to `pdf-parse`, you might refer to the solution [here](https://gitlab.com/autokent/pdf-parse/-/issues/24).
 
 # Citation
-If you find this work useful for your research, please cite our github repo:
+If you find this work useful for your research, please cite our GitHub repo:
 ```bibtex
 @misc{chen2025generative,
     title = {Beyond Chat: Generative Interfaces for Language Models},
