@@ -49,6 +49,7 @@ Put the following API keys in the `.env` file.
 - [OpenAI API key](https://platform.openai.com/signup/)
 - [Anthropic API key](https://console.anthropic.com/)
 - [Google API key](https://console.cloud.google.com/apis/credentials)
+- [EXA API key](https://exa.ai/)
 
 #### Authentication
 
@@ -126,7 +127,10 @@ yarn dev
 
 On initial load, compilation may take time.
 
-4. Open [localhost:3000](http://localhost:3000) with your browser and start trying generative interfaces. Using Claude is recommended. Generation can take multiple minutes due to iterative generation. You can track the intermediate steps in the terminal where you run `yarn dev` in `apps/agents`.
+4. Open [localhost:3000](http://localhost:3000) with your browser and start trying generative interfaces.
+  a. Using Claude is recommended. Turn on web search to enable fetching relevant web pages.
+  b. Generation can take multiple minutes due to iterative generation.
+  c. You can track the intermediate steps in the terminal where you run `yarn dev` in `apps/agents`.
 
 ### Troubleshooting
 
