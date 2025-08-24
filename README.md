@@ -15,7 +15,7 @@ Stanford University
   •
   <b><a href="https://genertiveui.github.io/">Paper</a></b>
   •
-  <b><a href="https://github.com/SALT-NLP/GenUI">Repo</a></b>
+  <b><a href="https://huggingface.co/datasets/SALT-NLP/GenUI">Dataset</a></b>
 
 ## What are Generative Interfaces?
 
