@@ -128,9 +128,9 @@ yarn dev
 On initial load, compilation may take time.
 
 4. Open [localhost:3000](http://localhost:3000) with your browser and start trying generative interfaces.
-  a. Using Claude is recommended. Turn on web search to enable fetching relevant web pages.
-  b. Generation can take multiple minutes due to iterative generation.
-  c. You can track the intermediate steps in the terminal where you run `yarn dev` in `apps/agents`.
+  - Using Claude is recommended. Turn on web search to enable fetching relevant web pages.
+  - Generation can take multiple minutes due to iterative generation.
+  - You can track the intermediate steps in the terminal where you run `yarn dev` in `apps/agents`.
 
 ### Troubleshooting
 
