@@ -140,7 +140,7 @@ For problems related to `pdf-parse`, you might refer to the solution [here](http
 If you find this work useful for your research, please cite our GitHub repo:
 ```bibtex
 @misc{chen2025generative,
-    title = {Beyond Chat: Generative Interfaces for Language Models},
+    title = {Generative Interfaces for Language Models},
     author = {Chen, Jiaqi and Zhang, Yanzhe and Zhang, Yutong and Shao, Yijia and Yang, Diyi},
     year = {2025}
 }
