@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-<a href="https://genertiveui.github.io/" target="_blank">
+<a href="https://salt-nlp.github.io/generative_interfaces/" target="_blank">
   <img src="./static/head.png" alt="GenUI banner">
 </a>
 </p>
@@ -11,9 +11,9 @@ Stanford University
 *Equal contribution
 <br />
 <h3 align="center">
-  <b><a href="https://genertiveui.github.io/">Homepage</a></b>
+  <b><a href="https://salt-nlp.github.io/generative_interfaces/">Homepage</a></b>
   •
-  <b><a href="https://genertiveui.github.io/">Paper</a></b>
+  <b><a href="https://salt-nlp.github.io/generative_interfaces/">Paper</a></b>
   •
   <b><a href="https://huggingface.co/datasets/SALT-NLP/GenUI">Dataset</a></b>
 
