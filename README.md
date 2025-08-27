@@ -16,6 +16,8 @@ Stanford University
   <b><a href="https://salt-nlp.github.io/generative_interfaces/">Paper</a></b>
   •
   <b><a href="https://huggingface.co/datasets/SALT-NLP/GenUI">Dataset</a></b>
+  •
+  <b><a href="https://salt-nlp.github.io/generative_interfaces/dataviewer/data_viewer.html">Data Viewer</a></b>
 
 ## What are Generative Interfaces?
 
