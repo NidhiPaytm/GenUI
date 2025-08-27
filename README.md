@@ -13,7 +13,7 @@ Stanford University
 <h3 align="center">
   <b><a href="https://salt-nlp.github.io/generative_interfaces/">Homepage</a></b>
   •
-  <b><a href="https://salt-nlp.github.io/generative_interfaces/">Paper</a></b>
+  <b><a href="https://arxiv.org/abs/2508.19227">Paper</a></b>
   •
   <b><a href="https://huggingface.co/datasets/SALT-NLP/GenUI">Dataset</a></b>
   •
@@ -142,8 +142,11 @@ For problems related to `pdf-parse`, you might refer to the solution [here](http
 If you find this work useful for your research, please cite our GitHub repo:
 ```bibtex
 @misc{chen2025generative,
-    title = {Generative Interfaces for Language Models},
-    author = {Chen, Jiaqi and Zhang, Yanzhe and Zhang, Yutong and Shao, Yijia and Yang, Diyi},
-    year = {2025}
+    title={Generative Interfaces for Language Models},
+    author={Jiaqi Chen and Yanzhe Zhang and Yutong Zhang and Yijia Shao and Diyi Yang},
+    year={2025},
+    eprint={2508.19227},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
 ```
